@@ -30,7 +30,7 @@ describe("TicTacToe", () => {
       expect(game.board[0][0]).toBe("X");
     });
     it("There is no winner yet, so the game continues", () => {
-      expect(game.winner).toBeUndefined();
+      expect(game.winner).toBe("");
     });
     it("Player 2 plays next", () => {
       expect(game.currentPlayer).toBe("O");
@@ -40,7 +40,7 @@ describe("TicTacToe", () => {
       expect(game.board[0][1]).toBe("O");
     });
     it("Still, there is no winner yet, so the game continues", () => {
-      expect(game.winner).toBeUndefined();
+      expect(game.winner).toBe("");
     });
     it("Player 1 plays next", () => {
       expect(game.currentPlayer).toBe("X");
