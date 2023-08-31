@@ -20,4 +20,30 @@ describe("TicTacToe", () => {
       expect(game.currentPlayer).toBe("X");
     });
   });
+  describe("The game flow works as follows", () => {
+    const game = new TicTacToe();
+    it("Player 1 plays first", () => {
+      expect(game.currentPlayer).toBe("X");
+    });
+    it("Player 1 makes a move on the board, cell 0,0", () => {
+      game.play(0, 0);
+      expect(game.board[0][0]).toBe("X");
+    });
+    it("There is no winner yet, so the game continues", () => {
+      expect(game.winner).toBeUndefined();
+    });
+    it("Player 2 plays next", () => {
+      expect(game.currentPlayer).toBe("O");
+    });
+    it("Player 2 makes a move on the board, cell 0,1", () => {
+      game.play(0, 1);
+      expect(game.board[0][1]).toBe("O");
+    });
+    it("Still, there is no winner yet, so the game continues", () => {
+      expect(game.winner).toBeUndefined();
+    });
+    it("Player 1 plays next", () => {
+      expect(game.currentPlayer).toBe("X");
+    });
+  });
 });

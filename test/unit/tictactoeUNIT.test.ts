@@ -25,4 +25,16 @@ describe("TicTacToe", () => {
       expect(game.currentPlayer).toBe("X");
     });
   });
+  describe("A player can place his mark in a cell on the board", () => {
+    const game = new TicTacToe();
+    it("Player 1 makes a move on the board, cell 0,0", () => {
+      game.placeMark(0, 0);
+      expect(game.board[0][0]).toBe("X");
+    });
+    it("Player 2 makes a move on the board, cell 0,1", () => {
+      game.currentPlayer = game.player2;
+      game.placeMark(0, 1);
+      expect(game.board[0][1]).toBe("O");
+    });
+  });
 });

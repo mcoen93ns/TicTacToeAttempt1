@@ -18,4 +18,8 @@ export class TicTacToe {
     this.player2 = "O";
     this.currentPlayer = "X";
   }
+
+  placeMark(x: number, y: number) {
+    this.board[x][y] = this.currentPlayer;
+  }
 }
