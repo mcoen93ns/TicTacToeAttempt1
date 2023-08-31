@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import { TicTacToe } from "./tictactoe";
 
 // Create a new express application instance
-const app: express.Application = express();
+export const app: express.Application = express();
 
 app.use(express.json());
 

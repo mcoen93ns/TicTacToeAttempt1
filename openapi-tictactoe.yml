@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: TicTacToe API
+  version: 1.0.0
+  description: An API to play a bot vs. bot game of TicTacToe and get the winner.
+servers:
+  - url: http://localhost:3000
+paths:
+  /playTicTacToe:
+    post:
+      summary: Play a bot vs. bot TicTacToe game and get the winner.
+      responses:
+        200:
+          description: Game played successfully, and the winner is announced.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    description: Message announcing the winner.
+                required:
+                  - response
+      requestBody:
+        description: No request body required for this operation.
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+components:
+  schemas: {}
