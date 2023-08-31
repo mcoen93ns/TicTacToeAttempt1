@@ -120,10 +120,40 @@ export class TicTacToe {
     );
   }
 
+  findRandomEmptyCell(): number[] | undefined {
+    const emptyCellCoordinates: number[] = [];
+    for (let x = 0; x < 3; x += 1) {
+      for (let y = 0; y < 3; y += 1) {
+        if (this.board[x][y] === "") {
+          emptyCellCoordinates.push(x, y);
+          return emptyCellCoordinates;
+        }
+      }
+    }
+    return emptyCellCoordinates;
+  }
+
   play(x: number, y: number): void {
     if (this.placeMark(x, y)) {
       this.checkWin();
       this.switchCurrentPlayer();
     }
   }
+
+  botPlay(): void {
+    const emptyCellCoordinates = this.findRandomEmptyCell();
+    if (emptyCellCoordinates) {
+      this.play(emptyCellCoordinates[0], emptyCellCoordinates[1]);
+    }
+  }
+
+  playBotVsBot(): void {
+    while (this.winner === "") {
+      this.botPlay();
+    }
+  }
 }
+
+const game = new TicTacToe();
+game.playBotVsBot();
+console.log(`The game has ended: ${game.winner}`); // Logs the winner to the console

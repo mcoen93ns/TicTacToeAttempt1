@@ -1,6 +1,6 @@
 import { TicTacToe } from "../../src/tictactoe";
 import {
-    draw,
+  draw,
   playerOneWinsDiagonal1,
   playerOneWinsRow1,
   playerOneWinsRow3,
@@ -145,6 +145,25 @@ describe("TicTacToe", () => {
     it("All cells are filled, and there is no winner", () => {
       const game = draw();
       expect(game.checkDraw()).toBe(true);
+    });
+  });
+  describe("Since the game is played by bots, they need to select a random empty cell to make a move", () => {
+    it("When the board is empty, the coordinates of a cell will be found", () => {
+      const game = new TicTacToe();
+      expect(game.findRandomEmptyCell()).toBeDefined();
+    });
+    it("When the board is full, no cell will be found", () => {
+      const game = draw();
+      expect(game.findRandomEmptyCell()).toEqual([]);
+    });
+    it("When there is one cell empty in the middle of the board, the coordinates of this cell will be found", () => {
+      const game = new TicTacToe();
+      game.board = [
+        ["X", "O", "X"],
+        ["O", "", "O"],
+        ["X", "O", "X"],
+      ];
+      expect(game.findRandomEmptyCell()).toEqual([1, 1]);
     });
   });
 });

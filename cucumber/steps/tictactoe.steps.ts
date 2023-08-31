@@ -154,7 +154,7 @@ defineFeature(feature, (test) => {
     given("a new game of TicTacToe is started", () => {});
 
     when("the bots begin playing", () => {
-      game.playBot();
+      game.playBotVsBot();
     });
 
     then("the game ends in a win or a draw", () => {
