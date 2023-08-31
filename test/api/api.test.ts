@@ -1,8 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import request from "supertest";
-import express from "express";
-import { TicTacToe } from "../../src/tictactoe"; // adjust the path accordingly
-import { app } from "../../src/api"; // adjust the path accordingly
+import { app } from "../../src/api";
 
 describe("TicTacToe API", () => {
   it("should play the game and announce the winner", async () => {

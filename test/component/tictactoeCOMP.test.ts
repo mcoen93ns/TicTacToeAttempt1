@@ -1,5 +1,12 @@
 import { TicTacToe } from "../../src/tictactoe";
-import { draw, playerOneWinsDiagonal1, playerOneWinsRow1, playerTwoWinsColumn2, playerTwoWinsDiagonal2, playerTwoWinsRow2 } from "../doubles/double";
+import {
+  draw,
+  playerOneWinsDiagonal1,
+  playerOneWinsRow1,
+  playerTwoWinsColumn2,
+  playerTwoWinsDiagonal2,
+  playerTwoWinsRow2,
+} from "../doubles/double";
 
 describe("TicTacToe", () => {
   describe("Is a game that contains the following elements when a new game is started", () => {
