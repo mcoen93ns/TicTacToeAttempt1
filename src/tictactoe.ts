@@ -86,11 +86,37 @@ export class TicTacToe {
     return false;
   }
 
+  checkSecondDiagonalForWin(): boolean {
+    if (
+      this.board[0][2] === this.currentPlayer &&
+      this.board[1][1] === this.currentPlayer &&
+      this.board[2][0] === this.currentPlayer
+    ) {
+      this.winner = this.currentPlayer;
+      return true;
+    }
+    return false;
+  }
+
+  checkDraw(): boolean {
+    for (let x = 0; x < 3; x += 1) {
+      for (let y = 0; y < 3; y += 1) {
+        if (this.board[x][y] === "") {
+          return false;
+        }
+      }
+    }
+    this.winner = "Draw";
+    return true;
+  }
+
   checkWin(): boolean {
     return (
       this.checkHorizontalWin() ||
       this.checkVerticalWin() ||
-      this.checkFirstDiagonalForWin()
+      this.checkFirstDiagonalForWin() ||
+      this.checkSecondDiagonalForWin() ||
+      this.checkDraw()
     );
   }
 

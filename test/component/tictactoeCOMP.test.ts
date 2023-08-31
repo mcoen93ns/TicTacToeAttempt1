@@ -1,5 +1,5 @@
 import { TicTacToe } from "../../src/tictactoe";
-import { playerOneWinsDiagonal1, playerOneWinsRow1, playerTwoWinsColumn2, playerTwoWinsRow2 } from "../doubles/double";
+import { draw, playerOneWinsDiagonal1, playerOneWinsRow1, playerTwoWinsColumn2, playerTwoWinsDiagonal2, playerTwoWinsRow2 } from "../doubles/double";
 
 describe("TicTacToe", () => {
   describe("Is a game that contains the following elements when a new game is started", () => {
@@ -69,6 +69,18 @@ describe("TicTacToe", () => {
         const game = playerOneWinsDiagonal1();
         expect(game.winner).toBe(game.player1);
       });
+    });
+    describe("And also through a diagonal victory, from the top right to the bottom left", () => {
+      it("Player 2 finishes the 2nd diagonal: O O O", () => {
+        const game = playerTwoWinsDiagonal2();
+        expect(game.winner).toBe(game.player2);
+      });
+    });
+  });
+  describe("But..", () => {
+    it("When all cells are filled, and there is no winner, then the game is a draw", () => {
+      const game = draw();
+      expect(game.winner).toBe("Draw");
     });
   });
 });

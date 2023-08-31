@@ -10,6 +10,12 @@
 - Player 1 wins with diagonal victory ✅
     - Write end to end test ✅
 
+- Draw ✅
+    - Write end to end test ✅
+
+- Bot mode: a game is played between two BOTs 🙌
+    - Write end to end test ✅
+
 ## Components
 - Starting a new game ✅
 -- empty game board
@@ -25,11 +31,23 @@
 -- no winner yet
 -- player 1 becomes current player
 
-- Detecting a winner 🙌
+- Detecting a winner ✅
 -- player 1 wins with horizontal victory ✅
 -- player 2 wins with vertical victory ✅
 -- player 1 wins with diagonal victory from top left to bottom right ✅
--- player 2 wins with diagonal victory from top right to bottom left 🙌
+-- player 2 wins with diagonal victory from top right to bottom left ✅
+
+- Detecting a draw ✅
+
+- Bot mode 
+-- Trigger the bots to play a game 🙌
+--- Player 1 starts
+--- Picks a random empty cell
+--- Places his mark
+--- Player 2 picks a random empty cell
+--- Places his mark
+--- Repeat until there is a winner or a draw
+-- Result: winner or draw
 
 ## Units
 - Game board
@@ -66,6 +84,12 @@
 -- 1st diagonal: X X X --> Player 1 wins ✅
 
 - Check for diagonal winner (2nd diagonal, top right to bottom left)
--- 2nd diagonal: '' '' O --> No winner yet 🙌
--- 2nd diagonal: O O O --> Player 2 wins
+-- 2nd diagonal: '' '' O --> No winner yet ✅
+-- 2nd diagonal: O O O --> Player 2 wins ✅
 
+- Check for draw ✅
+
+- Picking a random empty cell
+-- new board, all cells empty 🙌
+-- board with 1 free cell 
+-- board with no free cells

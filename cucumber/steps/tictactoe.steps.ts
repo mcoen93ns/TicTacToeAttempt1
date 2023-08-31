@@ -109,4 +109,56 @@ defineFeature(feature, (test) => {
       expect(game.winner).toBe(game.player1);
     });
   });
+  test("Draw", ({ given, when, and, then }) => {
+    const game = new TicTacToe();
+    given("a new game of TicTacToe is started", () => {});
+
+    when(/^Player 1 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+
+    and(/^Player 2 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+
+    and(/^Player 1 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+
+    and(/^Player 2 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+
+    and(/^Player 1 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+    and(/^Player 2 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+    and(/^Player 1 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+    and(/^Player 2 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+    and(/^Player 1 marks cell (\d+),(\d+)$/, (arg0, arg1) => {
+      game.play(arg0, arg1);
+    });
+
+    then(/^the game ends in a draw$/, () => {
+      expect(game.winner).toBe("Draw");
+    });
+  });
+  test("Bot mode", ({ given, when, then }) => {
+    const game = new TicTacToe();
+    given("a new game of TicTacToe is started", () => {});
+
+    when("the bots begin playing", () => {
+      game.playBot();
+    });
+
+    then("the game ends in a win or a draw", () => {
+      expect(game.winner).not.toBe("");
+    });
+  });
 });

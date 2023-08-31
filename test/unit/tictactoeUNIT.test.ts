@@ -1,9 +1,11 @@
 import { TicTacToe } from "../../src/tictactoe";
 import {
-    playerOneWinsDiagonal1,
+    draw,
+  playerOneWinsDiagonal1,
   playerOneWinsRow1,
   playerOneWinsRow3,
   playerTwoWinsColumn2,
+  playerTwoWinsDiagonal2,
   playerTwoWinsRow2,
 } from "../doubles/double";
 
@@ -124,6 +126,25 @@ describe("TicTacToe", () => {
         game.currentPlayer = game.player1;
         expect(game.checkFirstDiagonalForWin()).toBe(true);
       });
+    });
+    describe("The second flavour is from the top right to the bottom left", () => {
+      it("When only two moves have been played, there is no winner yet", () => {
+        const game = new TicTacToe();
+        game.placeMark(0, 2);
+        game.placeMark(0, 0);
+        expect(game.checkSecondDiagonalForWin()).toBe(false);
+      });
+      it("But when the 2nd diagonal looks like: O O O, then player 2 has won", () => {
+        const game = playerTwoWinsDiagonal2();
+        game.currentPlayer = game.player2;
+        expect(game.checkSecondDiagonalForWin()).toBe(true);
+      });
+    });
+  });
+  describe("A draw is also possible, when", () => {
+    it("All cells are filled, and there is no winner", () => {
+      const game = draw();
+      expect(game.checkDraw()).toBe(true);
     });
   });
 });
