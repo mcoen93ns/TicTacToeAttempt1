@@ -60,9 +60,43 @@ export class TicTacToe {
     return false;
   }
 
+  checkVerticalWin(): boolean {
+    for (let y = 0; y < 3; y += 1) {
+      if (
+        this.board[0][y] === this.currentPlayer &&
+        this.board[1][y] === this.currentPlayer &&
+        this.board[2][y] === this.currentPlayer
+      ) {
+        this.winner = this.currentPlayer;
+        return true;
+      }
+    }
+    return false;
+  }
+
+  checkFirstDiagonalForWin(): boolean {
+    if (
+      this.board[0][0] === this.currentPlayer &&
+      this.board[1][1] === this.currentPlayer &&
+      this.board[2][2] === this.currentPlayer
+    ) {
+      this.winner = this.currentPlayer;
+      return true;
+    }
+    return false;
+  }
+
+  checkWin(): boolean {
+    return (
+      this.checkHorizontalWin() ||
+      this.checkVerticalWin() ||
+      this.checkFirstDiagonalForWin()
+    );
+  }
+
   play(x: number, y: number): void {
     if (this.placeMark(x, y)) {
-      this.checkHorizontalWin();
+      this.checkWin();
       this.switchCurrentPlayer();
     }
   }
