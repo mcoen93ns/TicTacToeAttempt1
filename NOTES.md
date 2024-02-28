@@ -101,3 +101,9 @@
 -- new board, all cells empty ✅
 -- board with 1 free cell ✅
 -- board with no free cells ✅
+
+# Automating docker-compose
+- ✅ Create docker compose
+- ✅ Create docker compose commands
+- Add newman smoketest
+- Improve pipeline with docker quality gates

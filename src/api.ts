@@ -8,9 +8,12 @@ app.use(express.json());
 
 // Define the POST endpoint
 app.post("/playTicTacToe", (req: Request, res: Response) => {
+  console.log("Received a playTicTacToe request");
   const game = new TicTacToe();
   game.playBotVsBot();
   const response = `I am pleased to announce the winner of the game!: ${game.winner}`;
+
+  console.log(`The winner was ${game.winner}!`);
 
   res.json({
     response,

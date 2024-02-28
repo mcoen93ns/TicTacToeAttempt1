@@ -43,7 +43,11 @@
     "lint:fix": "npm run _lint -- --fix ./src/ ./test/",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,scss,md,json}' --config ./.prettierrc",
     "prepare-githooks": "husky install",
-    "start": "node ./dist/api.js"
+    "start": "node ./dist/api.js",
+    "docker_build": "docker build -t mathijs/tictactoe:local .",
+    "docker_compose_refresh": "docker-compose --project-name tictacktoestack down && npm run docker_build && docker-compose --project-name tictacktoestack up -d",
+    "docker_compose_logs": "docker-compose --project-name tictacktoestack logs -f",
+    "docker_compose_destroy": "docker-compose --project-name tictacktoestack down"
   },
   "author": "",
   "license": "ISC"
