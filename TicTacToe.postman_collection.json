@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "6976a796-181a-4d7b-830a-eed8ff99218e",
+		"name": "TicTacToe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31782829"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/dummy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response contains a win notification!\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.response).to.contains(\"I am pleased to announce the winner of the game!:\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"message\": \"Hello Mike!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/playTicTacToe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"playTicTacToe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
