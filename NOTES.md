@@ -105,5 +105,16 @@
 # Automating docker-compose
 - ✅ Create docker compose
 - ✅ Create docker compose commands
-- Add newman smoketest
+- ✅ Add newman smoketest
+- ✅ Run smoketest when doing docker refresh
 - Improve pipeline with docker quality gates
+    - ✅ hadolint
+        -- Install Scoop via Powershell (non-admin): iwr -useb get.scoop.sh | iex
+        -- Restart VS Code
+        -- Run following command: scoop install hadolint 
+        -- Inspect using hadolint: hadolint Dockerfile
+    - 🙌 syft
+        -- Install syft: scoop install syft
+        
+    - dive
+    - container structure test

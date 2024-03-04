@@ -45,7 +45,7 @@
     "prepare-githooks": "husky install",
     "start": "node ./dist/api.js",
     "docker_build": "docker build -t mathijs/tictactoe:local .",
-    "docker_compose_refresh": "docker-compose --project-name tictactoestack down && npm run docker_build && docker-compose --project-name tictactoestack up -d",
+    "docker_compose_refresh": "docker-compose --project-name tictactoestack down && npm run docker_build && docker-compose --project-name tictactoestack up -d && newman run smoketest.postman_collection.json",
     "docker_compose_logs": "docker-compose --project-name tictactoestack logs -f",
     "docker_compose_destroy": "docker-compose --project-name tictactoestack down"
   },
