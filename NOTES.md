@@ -113,8 +113,10 @@
         -- Restart VS Code
         -- Run following command: scoop install hadolint 
         -- Inspect using hadolint: hadolint Dockerfile
-    - 🙌 syft
+    - ✅ syft
         -- Install syft: scoop install syft
-        
     - dive
+        -- ✅ install
+        -- ✅ Add to refresh command
+
     - container structure test
