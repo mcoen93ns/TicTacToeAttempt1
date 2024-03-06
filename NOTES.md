@@ -120,4 +120,7 @@
         -- ✅ install
         -- ✅ Add to refresh command
 
-    - container structure test
+    - 🙌 container structure test
+
+    "dive": "docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e CI=true wagoodman/dive:latest mathijs/tictactoe:local",
+    docker run --rm -it -v /container-structure-test-config.yml:/config/container-structure-test-config.yml -v /var/run/docker.sock:/var/run/docker.sock gcr.io/gcp-runtimes/container-structure-test:latest test --image mathijs/tictactoe:local --config /config/container-structure-test-config.yml
