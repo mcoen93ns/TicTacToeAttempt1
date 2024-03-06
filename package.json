@@ -45,10 +45,14 @@
     "prepare-githooks": "husky install",
     "start": "node ./dist/api.js",
     "docker_build": "docker build -t mathijs/tictactoe:local .",
-    "docker_compose_refresh": "docker-compose --project-name tictactoestack down && npm run docker_build && npm run dive && docker-compose --project-name tictactoestack up -d && newman run smoketest.postman_collection.json",
+    "docker_compose_refresh": "docker-compose --project-name tictactoestack down && npm run inspec && npm run hadolint && npm run docker_build && npm run dive && docker-compose --project-name tictactoestack up -d && npm run newman && npm run syft",
     "docker_compose_logs": "docker-compose --project-name tictactoestack logs -f",
     "docker_compose_destroy": "docker-compose --project-name tictactoestack down",
-    "dive": "docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e CI=true wagoodman/dive:latest mathijs/tictactoe:local"
+    "newman": "newman run smoketest.postman_collection.json",
+    "hadolint": "hadolint Dockerfile",
+    "dive": "docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e CI=true wagoodman/dive:latest mathijs/tictactoe:local",
+    "syft": "syft mathijs/tictactoe:local -o syft-text=sbom.syft.txt",
+    "inspec": "inspec exec dockerfile-check"
   },
   "author": "",
   "license": "ISC"
