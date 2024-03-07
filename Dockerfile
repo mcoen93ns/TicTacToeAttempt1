@@ -1,14 +1,16 @@
 # Use the official Node 18 image as a base image
-FROM node:18-alpine
+FROM node:21-alpine
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app
+
+ENV NODE_ENV=production
 
 # Copy package.json and package-lock.json first to leverage Docker cache
 COPY package*.json ./
 
 # Install app dependencies
-RUN npm install
+RUN npm ci
 
 # If you have global packages, you might want to add them too
 # RUN npm install -g some-global-package

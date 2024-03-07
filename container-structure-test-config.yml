@@ -1,6 +1,18 @@
 schemaVersion: 2.0.0
+
 commandTests:
-  - name: "say hello world"
-    command: "echo"
-    args: ["Hello, World!"]
-    expectedOutput: ["Hello, World!"]
+  - name: "Node is installed"
+    command: "which"
+    args: ["node"]
+    expectedOutput: ["/usr/local/bin/node"]
+
+fileExistenceTests:
+- name: 'package.json'
+  path: '/usr/src/app/package.json'
+  shouldExist: true
+- name: 'node_modules folder exists'
+  path: '/usr/src/app/node_modules'
+  shouldExist: true
+- name: 'entrypoint exists'
+  path: '/usr/src/app/dist/api.js'
+  shouldExist: true
