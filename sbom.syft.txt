@@ -5,47 +5,47 @@
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 1
- Digest:	 sha256:7beab2af183810c16022da2dd5b4d5a420d3d64ab07450f689eb05d409f837e7
- Size:		 123728130
+ Digest:	 sha256:1820ced2babc17666037567d0979d3a79325d8589abfa55bf0d8cbb0b01db3b7
+ Size:		 123413740
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 2
- Digest:	 sha256:005305d5255d5c2bb4bc9c841c25b0f524a46d2786fda524a3259291de747b76
+ Digest:	 sha256:e5dbf280f9ee0772f606ee465b97e0f3362318cf38bb9612045df8dd9321d7a1
  Size:		 7823411
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 3
- Digest:	 sha256:5d66c6f55abe4c7f45989ae948c40bfc46d67de6bf0091b678e5d65c3fe65eed
+ Digest:	 sha256:e9c8da8472c7c8595c7436820a4dd24aa2fee13f70d56309835720f49488dd28
  Size:		 388
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 4
- Digest:	 sha256:422cbc40dcad629e9f6ae49abfbd9b85c399f6430dfacb0c4866c99107a3e16f
+ Digest:	 sha256:ba2e6f07618500712e3ae33807ffce84d90701f73e88a3086d0079a5c317d77f
  Size:		 0
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 5
- Digest:	 sha256:aaf0ff9fa800dffc5ef6bca1e396ebd83a6972a97e1d88ecd5ae107569a7ad52
+ Digest:	 sha256:d3e9d41069e40b9f32884457099b5f3c333162028cea86b83d141c024a2fb116
  Size:		 517441
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 6
- Digest:	 sha256:07918372743f48517093b43a2d7a50f93c57436be7fe7f7dd9055454011533cf
- Size:		 57659433
+ Digest:	 sha256:843084339b32a68be14b904aac2f3f2ab648fb81f5aa98ea12d40ca16e48afd6
+ Size:		 55446288
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 7
- Digest:	 sha256:f5467af59be0a15c57b9dd6a3c63738d7736a927d9ecf5cf3938bfc36275f20b
+ Digest:	 sha256:56685fec80d2587a98180b99a7a20a125bc98c6c809b36d81f07d70211db78f4
  Size:		 4284
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 8
- Digest:	 sha256:eeceea99a9ea8a116ab722bc00448f9f37543c1ad898c4306fa29476198ab73a
+ Digest:	 sha256:85efbb966a064536952c19bbb816c07f3a0456bd46e306e85e253f2b881854f7
  Size:		 12450
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
  Layer:		 9
- Digest:	 sha256:8b37911ca453e0acb3d75b0a69526367d6012b3b8e1372af26a5f7848d520133
+ Digest:	 sha256:4fa6fc71c1f2c0a649f403e0434fc82ab7c48fbfa7b1518dfcecff1b1626bd1c
  Size:		 6382
  MediaType:	 application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -65,17 +65,17 @@
  Found by:	 javascript-package-cataloger
 
 [@npmcli/agent]
- Version:	 2.2.0
+ Version:	 2.2.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@npmcli/arborist]
- Version:	 7.2.1
+ Version:	 7.4.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@npmcli/config]
- Version:	 8.0.2
+ Version:	 8.2.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -90,7 +90,7 @@
  Found by:	 javascript-package-cataloger
 
 [@npmcli/git]
- Version:	 5.0.3
+ Version:	 5.0.4
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -125,17 +125,17 @@
  Found by:	 javascript-package-cataloger
 
 [@npmcli/promise-spawn]
- Version:	 7.0.0
+ Version:	 7.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@npmcli/query]
- Version:	 3.0.1
+ Version:	 3.1.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@npmcli/run-script]
- Version:	 7.0.2
+ Version:	 7.0.4
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -145,22 +145,32 @@
  Found by:	 javascript-package-cataloger
 
 [@sigstore/bundle]
- Version:	 2.1.0
+ Version:	 2.2.0
+ Type:		 npm
+ Found by:	 javascript-package-cataloger
+
+[@sigstore/core]
+ Version:	 1.0.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@sigstore/protobuf-specs]
- Version:	 0.2.1
+ Version:	 0.3.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@sigstore/sign]
- Version:	 2.2.0
+ Version:	 2.2.3
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [@sigstore/tuf]
- Version:	 2.2.0
+ Version:	 2.3.1
+ Type:		 npm
+ Found by:	 javascript-package-cataloger
+
+[@sigstore/verify]
+ Version:	 1.1.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -234,11 +244,6 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
-[abort-controller]
- Version:	 3.0.0
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
 [accepts]
  Version:	 1.3.8
  Type:		 npm
@@ -275,32 +280,7 @@
  Found by:	 javascript-package-cataloger
 
 [ansi-regex]
- Version:	 5.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[ansi-regex]
- Version:	 5.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[ansi-regex]
- Version:	 5.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[ansi-regex]
- Version:	 5.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[ansi-regex]
- Version:	 5.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[ansi-regex]
- Version:	 5.0.1
+ Version:	 6.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -340,7 +320,7 @@
  Found by:	 javascript-package-cataloger
 
 [are-we-there-yet]
- Version:	 4.0.1
+ Version:	 4.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -351,11 +331,6 @@
 
 [balanced-match]
  Version:	 1.0.2
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[base64-js]
- Version:	 1.5.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -376,11 +351,6 @@
 
 [brace-expansion]
  Version:	 2.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[buffer]
- Version:	 6.0.3
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -410,7 +380,7 @@
  Found by:	 apk-db-cataloger
 
 [cacache]
- Version:	 18.0.0
+ Version:	 18.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -515,7 +485,7 @@
  Found by:	 javascript-package-cataloger
 
 [corepack]
- Version:	 0.24.0
+ Version:	 0.25.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -559,11 +529,6 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
-[delegates]
- Version:	 1.0.0
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
 [depd]
  Version:	 2.0.0
  Type:		 npm
@@ -575,7 +540,7 @@
  Found by:	 javascript-package-cataloger
 
 [diff]
- Version:	 5.1.0
+ Version:	 5.2.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -631,16 +596,6 @@
 
 [etag]
  Version:	 1.8.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[event-target-shim]
- Version:	 5.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[events]
- Version:	 3.3.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -740,7 +695,7 @@
  Found by:	 javascript-package-cataloger
 
 [hasown]
- Version:	 2.0.0
+ Version:	 2.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -760,12 +715,12 @@
  Found by:	 javascript-package-cataloger
 
 [http-proxy-agent]
- Version:	 7.0.0
+ Version:	 7.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [https-proxy-agent]
- Version:	 7.0.2
+ Version:	 7.0.4
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -779,13 +734,8 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
-[ieee754]
- Version:	 1.2.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
 [ignore-walk]
- Version:	 6.0.3
+ Version:	 6.0.4
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -814,8 +764,8 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
-[ip]
- Version:	 2.0.0
+[ip-address]
+ Version:	 9.0.5
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -864,8 +814,13 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
+[jsbn]
+ Version:	 1.1.0
+ Type:		 npm
+ Found by:	 javascript-package-cataloger
+
 [json-parse-even-better-errors]
- Version:	 3.0.0
+ Version:	 3.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -905,57 +860,57 @@
  Found by:	 apk-db-cataloger
 
 [libnpmaccess]
- Version:	 8.0.1
+ Version:	 8.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmdiff]
- Version:	 6.0.3
+ Version:	 6.0.7
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmexec]
- Version:	 7.0.4
+ Version:	 7.0.8
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmfund]
- Version:	 5.0.1
+ Version:	 5.0.5
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmhook]
- Version:	 10.0.0
+ Version:	 10.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmorg]
- Version:	 6.0.1
+ Version:	 6.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmpack]
- Version:	 6.0.3
+ Version:	 6.0.7
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmpublish]
- Version:	 9.0.2
+ Version:	 9.0.4
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmsearch]
- Version:	 7.0.0
+ Version:	 7.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmteam]
- Version:	 6.0.0
+ Version:	 6.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [libnpmversion]
- Version:	 5.0.1
+ Version:	 5.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -970,7 +925,7 @@
  Found by:	 apk-db-cataloger
 
 [lru-cache]
- Version:	 10.0.2
+ Version:	 10.2.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1050,11 +1005,6 @@
  Found by:	 javascript-package-cataloger
 
 [minipass]
- Version:	 3.3.6
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[minipass]
  Version:	 5.0.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
@@ -1065,7 +1015,7 @@
  Found by:	 javascript-package-cataloger
 
 [minipass-collect]
- Version:	 1.0.2
+ Version:	 2.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1165,7 +1115,7 @@
  Found by:	 javascript-package-cataloger
 
 [node]
- Version:	 21.6.2
+ Version:	 21.7.1
  Type:		 binary
  Found by:	 binary-classifier-cataloger
 
@@ -1185,7 +1135,7 @@
  Found by:	 javascript-package-cataloger
 
 [npm]
- Version:	 10.2.4
+ Version:	 10.5.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1215,7 +1165,7 @@
  Found by:	 javascript-package-cataloger
 
 [npm-packlist]
- Version:	 8.0.0
+ Version:	 8.0.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1260,7 +1210,7 @@
  Found by:	 javascript-package-cataloger
 
 [pacote]
- Version:	 17.0.4
+ Version:	 17.0.6
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1290,17 +1240,12 @@
  Found by:	 javascript-package-cataloger
 
 [postcss-selector-parser]
- Version:	 6.0.13
+ Version:	 6.0.15
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
 [proc-log]
  Version:	 3.0.0
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[process]
- Version:	 0.11.10
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1310,7 +1255,7 @@
  Found by:	 javascript-package-cataloger
 
 [promise-call-limit]
- Version:	 1.0.2
+ Version:	 3.0.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1374,18 +1319,8 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
-[readable-stream]
- Version:	 4.4.2
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
 [retry]
  Version:	 0.12.0
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[safe-buffer]
- Version:	 5.2.1
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1410,7 +1345,7 @@
  Found by:	 apk-db-cataloger
 
 [semver]
- Version:	 7.5.4
+ Version:	 7.6.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1455,7 +1390,7 @@
  Found by:	 javascript-package-cataloger
 
 [sigstore]
- Version:	 2.1.0
+ Version:	 2.2.2
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1465,7 +1400,7 @@
  Found by:	 javascript-package-cataloger
 
 [socks]
- Version:	 2.7.1
+ Version:	 2.8.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1480,7 +1415,7 @@
  Found by:	 javascript-package-cataloger
 
 [spdx-exceptions]
- Version:	 2.3.0
+ Version:	 2.5.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1490,7 +1425,12 @@
  Found by:	 javascript-package-cataloger
 
 [spdx-license-ids]
- Version:	 3.0.16
+ Version:	 3.0.17
+ Type:		 npm
+ Found by:	 javascript-package-cataloger
+
+[sprintf-js]
+ Version:	 1.1.3
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1529,11 +1469,6 @@
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
-[string_decoder]
- Version:	 1.3.0
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
 [strip-ansi]
  Version:	 6.0.1
  Type:		 npm
@@ -1545,27 +1480,7 @@
  Found by:	 javascript-package-cataloger
 
 [strip-ansi]
- Version:	 6.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[strip-ansi]
- Version:	 6.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[strip-ansi]
- Version:	 6.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[strip-ansi]
- Version:	 6.0.1
- Type:		 npm
- Found by:	 javascript-package-cataloger
-
-[strip-ansi]
- Version:	 6.0.1
+ Version:	 7.1.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 
@@ -1610,7 +1525,7 @@
  Found by:	 javascript-package-cataloger
 
 [tuf-js]
- Version:	 2.1.0
+ Version:	 2.2.0
  Type:		 npm
  Found by:	 javascript-package-cataloger
 

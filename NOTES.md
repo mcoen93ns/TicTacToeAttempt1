@@ -137,3 +137,9 @@
 
     "dive": "docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock -e CI=true wagoodman/dive:latest mathijs/tictactoe:local",
     docker run --rm -it -v /container-structure-test-config.yml:/config/container-structure-test-config.yml -v /var/run/docker.sock:/var/run/docker.sock gcr.io/gcp-runtimes/container-structure-test:latest test --image mathijs/tictactoe:local --config /config/container-structure-test-config.yml
+
+Homework 14-03 onwards
+    - Create a new folder for the API stuff (open api spec, newman collection)
+    - Test GitHub actions to see if all the changes that were made on 14-03 actually work
+    - Add the docker compose stuff including the newman tests (see slack and https://github.com/NikiforovAll/testing-with-newman-demo)
+    - Update the simple cookiecutter to use all the new stuff that we have made

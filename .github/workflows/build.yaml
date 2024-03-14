@@ -56,3 +56,51 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/tictactoeattempt1:latest
+
+  container:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - name: 🛠️ install libs
+      run: npm install
+    - name: 🧑‍🍳 inspec dockerfile
+      run: npm run inspec
+    - name: 🈵 hadolint
+      run: npm run hadolint
+    - name: Build and push Docker image
+      uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
+      with:
+        context: .
+        file: ./Dockerfile
+        push: true
+        tags: ${{ secrets.DOCKER_USERNAME }}/tictactoeattempt1:latest
+    - name: 🫙 container structure test
+      run: npm run container-structure-test
+    - name: 🤿 dive
+      run: npm run dive
+    - name: 💻 trivy
+      run: npm run trivy
+    - name: 🐙 docker compose
+      - uses: adambirds/docker-compose-action@v1.3.0
+        with:
+          compose-file: "./docker-compose.yml"
+          down-flags: "--project-name tictactoestack"
+          services: |
+            tictactoe
+          test-container: newman
+          test-command: "npm test"
