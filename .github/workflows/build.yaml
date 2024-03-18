@@ -76,8 +76,15 @@ jobs:
           cache: "npm"
       - name: 🛠️ install libs
         run: npm install
+
+      - name: 🛠️ install chef inspec
+        uses: actionshub/chef-install@main
+        with:
+          channel: current
+          project: inspec
       - name: 🧑‍🍳 inspec dockerfile
         run: npm run inspec
+
       - name: 🈵 hadolint
         run: npm run hadolint
       - name: Build and push Docker image
