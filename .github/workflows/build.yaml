@@ -28,9 +28,9 @@ jobs:
       - name: Hadolint
         uses: actions/checkout@v4
         uses: jbergstroem/hadolint-gh-action@v1
-          with:
-            # ignore warnings (but still fail on errors) from hadolint
-            error_level: 1
+        with:
+          # ignore warnings (but still fail on errors) from hadolint
+          error_level: 1
       - name: 🛠️ install libs
         run: npm install
       - name: 🕵🏻 check Linter smells
