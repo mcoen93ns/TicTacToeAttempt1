@@ -63,10 +63,8 @@ jobs:
         with:
           channel: current
           project: inspec
-      - name: set chef inspec license
-        run: inspec exec --chef-license-key "free-dc26fcf2-a3da-4300-a7b5-984bee02f605-5281"
       - name: ✍️ accept chef inspec license
-        run: inspec exec --chef-license accept
+        run: inspec exec --chef-license accept --chef-license-key "free-dc26fcf2-a3da-4300-a7b5-984bee02f605-5281"
       - name: 🧑‍🍳 inspec dockerfile
         run: npm run inspec
 
