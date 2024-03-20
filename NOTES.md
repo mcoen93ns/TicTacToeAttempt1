@@ -143,3 +143,12 @@ Homework 14-03 onwards
     - Test GitHub actions to see if all the changes that were made on 14-03 actually work
     - Add the docker compose stuff including the newman tests (see slack and https://github.com/NikiforovAll/testing-with-newman-demo)
     - Update the simple cookiecutter to use all the new stuff that we have made
+
+
+NOTES from 20-03 onwards
+- ✅ Add Hadolint to GitHub Actions
+- 🙋‍♂️ Add Chef Inspec to GitHub Actions
+- Add Container Structure Test
+- Add Dive
+- Add Trivvy
+- Add Docker Compose step
