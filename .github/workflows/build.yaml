@@ -46,6 +46,15 @@ jobs:
         with:
           # ignore warnings (but still fail on errors) from hadolint
           error_level: 1
+      - name: 🛠️ install chef inspec
+        uses: actionshub/chef-install@main
+        with:
+          channel: current
+          project: inspec
+      - name: ✍️ accept chef inspec license
+        run: inspec exec --chef-license accept --chef-license-key "free-dc26fcf2-a3da-4300-a7b5-984bee02f605-5281"
+      - name: 🧑‍🍳 inspec dockerfile
+        run: npm run inspec
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
@@ -58,15 +67,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/tictactoeattempt1:latest
-      - name: 🛠️ install chef inspec
-        uses: actionshub/chef-install@main
-        with:
-          channel: current
-          project: inspec
-      - name: ✍️ accept chef inspec license
-        run: inspec exec --chef-license accept --chef-license-key "free-dc26fcf2-a3da-4300-a7b5-984bee02f605-5281"
-      - name: 🧑‍🍳 inspec dockerfile
-        run: npm run inspec
 
   # container:
   #   runs-on: ubuntu-latest
