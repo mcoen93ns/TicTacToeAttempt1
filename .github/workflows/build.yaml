@@ -64,7 +64,7 @@ jobs:
           channel: current
           project: inspec
       - name: ✍️ accept chef inspec license
-        run: chef-inspec-ctl reconfigure --chef-license=accept
+        run: inspec exec --chef-license accept
       - name: 🧑‍🍳 inspec dockerfile
         run: npm run inspec
 
