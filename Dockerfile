@@ -1,6 +1,5 @@
 # Use the official Node 18 image as a base image
-# FROM node:21-alpine
-FROM node:latest
+FROM node:21-alpine
 
 # Set the working directory inside the container
 WORKDIR /usr/src/app

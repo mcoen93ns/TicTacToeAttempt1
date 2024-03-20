@@ -26,11 +26,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
-      - name: Hadolint
-        uses: jbergstroem/hadolint-gh-action@v1
-        with:
-          # ignore warnings (but still fail on errors) from hadolint
-          error_level: 1
       - name: 🛠️ install libs
         run: npm install
       - name: 🕵🏻 check Linter smells
@@ -46,6 +41,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - name: Hadolint
+        uses: jbergstroem/hadolint-gh-action@v1
+        with:
+          # ignore warnings (but still fail on errors) from hadolint
+          error_level: 1
       - name: Log in to Docker Hub
         uses: docker/login-action@f4ef78c080cd8ba55a85445d5b36e214a81df20a
         with:
